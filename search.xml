@@ -31,6 +31,31 @@
     
     
     <entry>
+      <title>Hosts文件</title>
+      <link href="/2020/04/16/technical-talk/hosts-wen-jian/"/>
+      <url>/2020/04/16/technical-talk/hosts-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hosts-文件"><a href="#Hosts-文件" class="headerlink" title="Hosts 文件"></a>Hosts 文件</h1><blockquote><p>​    Hosts，C:\Windows\System32\drivers\etc 路径下一个没有扩展名的文件，这个小小的 文件通常不到 1MB，原理也很简单，但应用场景却非常广泛。</p></blockquote><h2 id="1-Hosts-到底干什么"><a href="#1-Hosts-到底干什么" class="headerlink" title="1.Hosts 到底干什么"></a>1.Hosts 到底干什么</h2><p>了解 Hosts 工作原理前要先了解互联网工作原理。</p><p>当我们访问一个网站的时候，<strong>实际上访问的是这个网站所在服务器的 「IP 地址」</strong>，比如通过「220.181.38.148」也能打开百度的首页。</p><p>但是「IP 地址」是数字，不便于记忆，所以我们给不同网站的「IP 地址」取名，也就是网站的「域名」，比如<a href="https://www.baidu.com/。" target="_blank" rel="noopener">https://www.baidu.com/。</a></p><p>在 ARPANET（全球互联网的前生）发展初期是没有 DNS 的，整个网络中服务器数量都非常少，每台电脑只使用 Hosts 来解析不同服务器的「IP 地址」，后来互联网迅速壮大，单靠本地 Hosts 文件已经无法装下如此多信息，这才诞生了 DNS 。</p><p><strong>所以，Hosts 文件相当于网站的「通讯录」，它记录着不同「域名」对应的「IP 地址」。</strong></p><p>在操作系统中 Hosts 文件的优先级高于 DNS 服务器，如果 Hosts 有服务器信息，则直接调用，否则才询问 DNS 服务器。</p><p>正是利用 Hosts 的高优先级，将错误的「IP 地址」与域名绑定，就实现了屏蔽某些服务器的效果。</p><h2 id="2-Hosts-文件格式"><a href="#2-Hosts-文件格式" class="headerlink" title="2.Hosts 文件格式"></a>2.Hosts 文件格式</h2><p>Hosts 格式非常简单，左边为「服务器 IP 地址」，右边是对应域名，中间以最少一个空格隔开。</p><h2 id="3-Hosts-应用场景"><a href="#3-Hosts-应用场景" class="headerlink" title="3.Hosts 应用场景"></a>3.Hosts 应用场景</h2><p>大多数操作系统都有一个与 Hosts 类似功能的文件，工作原理也一样。</p><p>在 Windows 系统中，我们可能无法直接在「etc 文件夹」中修改保存它，可以将它复制到桌面，然后用记事本打开，修改后再复制回去。</p><p><strong>1、屏蔽广告和破解</strong></p><p>现在的网页广告大多是专门的广告投放公司在做，一部分广告屏蔽工具就是替换「无效的IP」来实现屏蔽广告的效果。</p><p>127.0.0.1 就常用来作屏蔽 IP，这是「本机回送地址」，也就是你是用的电脑。</p><p>比如我们在 Hosts 文件中加入 127.0.0.1 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 那就无法打开百度了</p><p>同样利用这个原理，一些破解软件，也通过添加错误的 Hosts 信息来屏蔽激活服务器，避免查询激活状态。</p><p><strong>2、访问 DNS 错误的网站</strong></p><p>现在我们访问网页都是通过 DNS 解析 IP 地址，如果使用本地 Hosts 则可以跳过这一步直接访问服务器 IP，可以提升网页打开速度，不过现在的 DNS 服务器响应速度都很快，大多数时候没必要这样做。</p><p>而有时候，有些网站，因为有些原因，导致 DNS 服务器无法给出正确的 IP 地址，也可以通过 Hosts 来代劳。</p><p><strong>3、建立映射关系</strong></p><p>有些公司的局域网内有自己的服务器，有些人也有自己的 NAS，每次输入 IP 访问有些麻烦，也可以再 Hosts 中将局域网中服务器 IP 与任意网址绑定，这样通过网址也能访问局域网中本没有域名的服务器。</p><p><strong>4、被滥用</strong></p><p>Hosts 简单又强大，自然就免不得被恶意使用，比如使用修改过的镜像，或者流氓PE安装系统，可能你的 Hosts 就已经被人动过手脚，他们将一些常用网站的 IP 换到自己的网站，以赚取浏览，甚至将用户导向一些还原度非常高的山寨网站上，骗取账户密码甚至财产。</p><p>不过还好只是修改 Hosts 并不会造成致命的系统安全故障，大家尽量使用微软提供的官方镜像和安装工具装系统就好了。</p><p><strong>如果你的 Hosts 已经被污染，也可以直接删除这个文件，或者到别的电脑上复制一个过来。</strong></p><p>最后需要注意，因为 Hosts 文件配置的是「静态IP」，如果服务器更新了IP地址，本地Hosts 就会失效，需要及时更新 Hosts 文件才行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构与算法链接</title>
       <link href="/2020/04/16/data-structures-and-algorithms/shu-ju-jie-gou-yu-suan-fa-lian-jie/"/>
       <url>/2020/04/16/data-structures-and-algorithms/shu-ju-jie-gou-yu-suan-fa-lian-jie/</url>
