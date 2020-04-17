@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="精彩MV（一）, 未名">
+    <meta name="keywords" content="Python中几个有趣的函数, 未名">
     <meta name="description" content="未名的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>精彩MV（一） | 未名亦名</title>
+    <title>Python中几个有趣的函数 | 未名亦名</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -353,12 +353,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">精彩MV（一）</h1>
+                    <h1 class="description center-align post-title">Python中几个有趣的函数</h1>
                 </div>
             </div>
         </div>
@@ -368,22 +368,146 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/python%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">python知识</span>
+                            </a>
+                        
+                            <a href="/tags/python%E5%87%BD%E6%95%B0/">
+                                <span class="chip bg-color">python函数</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/python%E7%9F%A5%E8%AF%86/" class="post-category">
+                                python知识
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -392,7 +516,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-16
+                    2020-04-13
                 </div>
                 
 
@@ -401,14 +525,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    90
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -423,30 +547,91 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>MV.1:</p>
+                <h1 id="Python中几个有趣的函数"><a href="#Python中几个有趣的函数" class="headerlink" title="Python中几个有趣的函数"></a><strong>Python中几个有趣的函数</strong></h1><blockquote>
+<p>今天主要是分享5个python内置的小函数。</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/白羊.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.2:</p>
+<h2 id="01-一用而过：lambda"><a href="#01-一用而过：lambda" class="headerlink" title="01 一用而过：lambda"></a>01 一用而过：lambda</h2><blockquote>
+<p>很多语言都有匿名函数，python的匿名函数写作lambda，当需要实现一定功能而又不想“大张旗鼓”的def一个函数时，lambda就是最优的选择。</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/%E5%A5%94%E8%B7%91.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.3：</p>
+<p>其语法格式一般是这样的：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token operator">**</span><span class="token number">2</span>
+<span class="token comment" spellcheck="true"># &lt;function __main__.&lt;lambda>(x)></span></code></pre>
+<p>也可以将它赋值给一个变量，由于python中一切皆对象，所以后续程序中就可以用该变量调用这个匿名函数。</p>
+<pre class=" language-python"><code class="language-python">f <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token operator">**</span><span class="token number">2</span>
+f<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 4</span></code></pre>
+<p>当然，这里其实没必要应用lambda来实现，因为既然要显式调用，还不如干脆直接写个明确的函数罢了。lambda函数更广泛的应用场景在于该匿名函数作为另一个函数的参数传递时，应用就比较合适了，例如，将lambda作为sort()函数的key参数，就可以实现特定功能的排序。</p>
+<pre class=" language-python"><code class="language-python">dyct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'a'</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">}</span>
+sorted<span class="token punctuation">(</span>dyct<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> key <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [('b', 1), ('a', 2), ('c', 5)]</span></code></pre>
+<h2 id="02-智能解压：zip"><a href="#02-智能解压：zip" class="headerlink" title="02 智能解压：zip"></a>02 智能解压：zip</h2><blockquote>
+<p>zip函数人如其名，是打包或者解包的函数，接受2个以上可迭代变量，输出对应位置组成元组后的迭代类型。例如：</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/曾经的你.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.4：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># &lt;zip at 0x1da016d15c8></span>
+list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [('a', 4), ('b', 5), ('c', 6)]</span>
+tuple<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># (('a', 4), ('b', 5), ('c', 6))</span></code></pre>
+<p>也可以接受多于2个输入可迭代变量，而且如果各迭代变量长度不一致也不会报错，只是此时返回迭代变量取决于输入总长度最短的一个。例如：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span>
+list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># (('a', 4, True), ('b', 5, False), ('c', 6, True))</span></code></pre>
+<p>与zip打包相对应的用法是解包，即对一个打包形式的元素进行依次解包，并返回多个新的列表。例如：</p>
+<pre class=" language-python"><code class="language-python">aZip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c <span class="token operator">=</span> zip<span class="token punctuation">(</span><span class="token operator">*</span>aZip<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># a:('a', 'b', 'c')</span>
+<span class="token comment" spellcheck="true"># b:(4, 5, 6)</span>
+<span class="token comment" spellcheck="true"># c:(True, False, True)</span></code></pre>
+<h2 id="03-一一映射：map"><a href="#03-一一映射：map" class="headerlink" title="03 一一映射：map"></a>03 一一映射：map</h2><blockquote>
+<p>map函数也正如其取名一样，是一个将接受的迭代变量依次经过某种映射，并输出映射后的迭代变量。例如，如果对列表中的某个变量依次完成求值，并返回一个新的列表，则可以应用map：</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/超越梦想 .mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.5：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+map<span class="token punctuation">(</span>str<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># &lt;map at 0x1da017136d8></span>
+list<span class="token punctuation">(</span>map<span class="token punctuation">(</span>str<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># ['1', '2', '3', '4']</span></code></pre>
+<p>这是map函数的一个典型用法：接受2个参数，第一个参数(上例中是str()函数）是一个要作用的函数，第二个参数是可迭代变量。</p>
+<p>当第一个函数的参数是是一个多变量函数时，map也可以接受更多的参数。例如：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+list<span class="token punctuation">(</span>map<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span>x<span class="token operator">**</span>y<span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [1, 4, 27, 64]</span></code></pre>
+<p>与zip函数中类似，当map里的函数参数长度不匹配时并不会报错，只是输出结果将由最短的决定：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+list<span class="token punctuation">(</span>map<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span>x<span class="token operator">**</span>y<span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [1, 4]</span></code></pre>
+<h2 id="04-一夫当关：filter"><a href="#04-一夫当关：filter" class="headerlink" title="04 一夫当关：filter"></a>04 一夫当关：filter</h2><blockquote>
+<p>与map函数类似，filter函数也接受一个函数及其变量作为参数，只是要求这个函数的返回结果是bool型，并用这个bool的结果决定输出的取舍问题。例如需要对一个输入列表过滤，要求保留3的倍数：</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/成都.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.6：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> range<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+filter<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># &lt;filter at 0x1da0171c0f0></span>
+list<span class="token punctuation">(</span>filter<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [0, 3, 6, 9]</span></code></pre>
+<p>这里需注意，当filter的第一个函数返回值不是bool型时不会报错，只是它会转化为bool型判断，如果判断结果不是False（python中会判为False的变量包括0、None、[]等等），则会将其输出，否则过滤掉：</p>
+<pre class=" language-python"><code class="language-python">a <span class="token operator">=</span> range<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+list<span class="token punctuation">(</span>filter<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token operator">%</span><span class="token number">3</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># [1, 2, 4, 5, 7, 8]</span></code></pre>
+<h2 id="05-万剑归宗：reduce"><a href="#05-万剑归宗：reduce" class="headerlink" title="05 万剑归宗：reduce"></a>05 万剑归宗：reduce</h2><blockquote>
+<p>map和filter函数都是多入多出型，实质上是完成了特定的变换或筛选。reduce则是归约函数，将一系列输入变量经过特定的函数后转化为一个结果输出。不过可能是由于应用场景有限的原因，reduce在python3中已不再是全局调用函数，必须要从functools包中导入方可使用：</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/荷塘月色.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> reduce
+a <span class="token operator">=</span> range<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+reduce<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x<span class="token operator">+</span>y<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 10</span></code></pre>
+<p>reduce函数还可以接受一个可选的初始值作为参数。应用reduce函数可以实现很多小trick，就看能不能想的到用的出：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> reduce
+s <span class="token operator">=</span> <span class="token string">'abcdefg'</span>
+reduce<span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> y<span class="token operator">+</span>x<span class="token punctuation">,</span> s<span class="token punctuation">,</span> <span class="token string">'AA'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 'gfedcbaAA'</span></code></pre>
+<h2 id="06-最后"><a href="#06-最后" class="headerlink" title="06 最后"></a>06 最后</h2><p>当然，尽管几个函数用法不可谓不优美、功能不可谓不强大，但都不是必须的，甚至某种程度上都可以用其他形式加以替代，例如map和filter函数都可以用列表推导式来简单实现，reduce函数功能也顶多用一个for循环迭代就能解决。</p>
+<p>但在致力于使python程序变得更加简洁优雅乃至装B耍秀的路上，这些函数也确有其用武之地，未尝不值得一试！</p>
 
             </div>
             <hr/>
@@ -472,7 +657,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://batdalao.github.io/musics/MV01.html">https://batdalao.github.io/musics/MV01.html</a>
+                    <a href="https://batdalao.github.io/posts/438b.html">https://batdalao.github.io/posts/438b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +694,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/python%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">python知识</span>
+                                </a>
+                            
+                                <a href="/tags/python%E5%87%BD%E6%95%B0/">
+                                    <span class="chip bg-color">python函数</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -675,60 +872,53 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/6774.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="登快阁">
                         
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">登快阁</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            每日诗词2020·4·13
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="post-category">
+                                    诗词
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">诗词</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">每日诗词</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -736,58 +926,56 @@ MV.6
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/22b9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Python读写数据文件">
                         
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">Python读写数据文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            Python读写数据文件
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/python%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    python交互
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/python%E4%BA%A4%E4%BA%92/">
+                        <span class="chip bg-color">python交互</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">数据分析</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -860,6 +1048,100 @@ MV.6
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

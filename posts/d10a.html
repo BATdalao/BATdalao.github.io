@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="精彩MV（一）, 未名">
+    <meta name="keywords" content="数据结构与算法链接, 未名">
     <meta name="description" content="未名的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>精彩MV（一） | 未名亦名</title>
+    <title>数据结构与算法链接 | 未名亦名</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -353,12 +353,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">精彩MV（一）</h1>
+                    <h1 class="description center-align post-title">数据结构与算法链接</h1>
                 </div>
             </div>
         </div>
@@ -368,22 +368,138 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">数据结构与算法</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                数据结构与算法
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -401,7 +517,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    90
+                    6
                 </div>
                 
 
@@ -423,31 +539,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>MV.1:</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/白羊.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.2:</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/%E5%A5%94%E8%B7%91.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.3：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/曾经的你.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.4：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/超越梦想 .mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.5：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/成都.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.6：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/荷塘月色.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-
+                <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="a050a332bbdf013e7fe4c06b489fa0609ff7877438b3ac634bba136237d39c27">ac2d65c739e0c121580cad5bb4b385b02f14904a4034b4856b2dbb2a4faa18a5c9adbc56628ecb4c959a2ba71976f037fda3797ae1bdb9de012cda7ab56a70cf54266e708859a36f294e7efe41bd7fab1fc6fb3e2c2cd1ba82a3b743575f05f99087f2d9ca357dbb96f43be8f94d29ce5e20a1b768070b02a30a340c70d31e0257018f0b61bb68fc0db5f97d122611853c1e6b2c6736e492168e3792c054e35af44745042f36095d40d9bb353cb54a89ce76342e560f58d9d4218e02360ae98de8865414c25aac79b4354308fbdbfdfdb87301bbbdd9a3ecdb69dd6d3bca2cc8700fb2058e0b2e70a9bf000e24b88a165f15ab4fcadf549259755bc267839b627e15bbad590792e695bdb155f74a2064953060d2a96e2bfbab657a25fb87a68472a8f8fea297a362fe72984dd7798a7bbb6e54d656ec5406a8c056fd0d27303878e39c0052185d980953f3426be8fcfb7c358b1a1b26cd114aeab2c0fdb7fcd9e26675bd1c4afcdad8461c494fe26a2b667e7db52aaf36d6f4a1cd0457ab0793dfca169170d18e6f18c36c7d128df851bc329a400b9abc2eb0f4ec7ee32ba490c9e6006bdc4baadf7994d27cf8948f29ebacbd064e771f82171ecd9a66f59fbdc10f34b86d1d5835f7f8f76599a6c57694b946421224f67f5e696da0f96a4db52d23470bb2a24a7011d769fe5be537e4ae64b8acb470cc2e97a61e3742b60955b1d0e97370fb3f690531a209f5d790c94495d5343eba8791f00cd32a20a492da36d397b30341b521c037b565f210a5f415e365d210139a27f7cd36e0a0fdbaaa7a45fd74bc0b72a033c83950753b02ac86e3f5d576fe412ae29a2c9c5e9afecdb3b938ba790a11386a518babfa523aeccc00e4a006562bc9caab24b1cfc50c41058a16c3231962acc85c98a658e6920a69dc2cb5d0d59600a517e134c35fc17c7e8e16d556ec4cc891909240ed7219cc360bb1086dd7b5ff7df827ad443be4bd992ecf5e5134ed4a037f992533b464f1a236ce1d59e865424678cf0ba300c24f49569c2d2713be986643c60a723bf6d4e8c2d472d20f2b41b74bf83e148f0dcdf49b0cfd8dbd4f1481614caa433279bdfb7718f1e0ded2018c233a571bb4ec57208553874670df4872d815a492d98342e7cb375677804de485cbe0dfb62446eb47b4574b38710693198d70bc6a373b3b98516d2b21dfa0378c4b3a14a9a2c8584e8395120fd43d4b27a9c262677bafe2be6685c5df680508c1046e9a0f37e6df7d98dd2247321e3502b496015e6fba9ccad9ca5fd1984761bc223e355b41d1d725c3fcb48319c9a61719aad2df0252113671b13a46eff6a3d66e519c9077e2dc7be51f0c27b02b5c2e6893daf442d1f38eb24bbb019bd2dda56227d58e83121b8798158185f24ca2950d50705083a2e37220af6bc0a89097efdd78d08a9cf37067f248e87e6e51beb62ec83f917122bba242d831a68986e7bb0a87613e6e9928182dbbaea0356bb6d0f81871d21591af8ca2d1e9c7e798027f90845287ba8b15b8cac406c6b4d4a2e3582213c38317b30d147e3016f4fa53a87fe31758aa2255bbcc8cbb6bb39cb0d224a66c1a620fe04bdc07e50038d4b37094934943a0eace9bc3edf87651e627d6303ecc745b5eb11baa151a2689e938d0ad158898ae9da1ca0489130f2672f69e0872339893c698de7395c4a7439cd76f79d710bd8ef8d5fa0298f5fa899f4211d2ac55374d1ca618ffc32471a64f24c166749f9d662b04</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
             </div>
             <hr/>
 
@@ -472,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://batdalao.github.io/musics/MV01.html">https://batdalao.github.io/musics/MV01.html</a>
+                    <a href="https://batdalao.github.io/posts/d10a.html">https://batdalao.github.io/posts/d10a.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +609,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">数据结构与算法</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -675,60 +779,49 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/d3bc.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Hosts文件">
                         
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">Hosts文件</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            Hosts文件
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" class="post-category">
+                                    技术杂谈
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">
+                        <span class="chip bg-color">技术杂谈</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -736,58 +829,52 @@ MV.6
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/2c57.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="临江仙·夜登小阁，忆洛中旧游">
                         
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">临江仙·夜登小阁，忆洛中旧游</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            每日诗词2020·4·15
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-15
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="post-category">
+                                    诗词
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">诗词</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">每日诗词</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -860,6 +947,100 @@ MV.6
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

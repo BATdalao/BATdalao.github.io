@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="精彩MV（一）, 未名">
+    <meta name="keywords" content="Hosts文件, 未名">
     <meta name="description" content="未名的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>精彩MV（一） | 未名亦名</title>
+    <title>Hosts文件 | 未名亦名</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -353,12 +353,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">精彩MV（一）</h1>
+                    <h1 class="description center-align post-title">Hosts文件</h1>
                 </div>
             </div>
         </div>
@@ -368,22 +368,138 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">
+                                <span class="chip bg-color">技术杂谈</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" class="post-category">
+                                技术杂谈
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -401,14 +517,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    90
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -423,30 +539,34 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>MV.1:</p>
+                <h1 id="Hosts-文件"><a href="#Hosts-文件" class="headerlink" title="Hosts 文件"></a>Hosts 文件</h1><blockquote>
+<p>​    Hosts，C:\Windows\System32\drivers\etc 路径下一个没有扩展名的文件，这个小小的 文件通常不到 1MB，原理也很简单，但应用场景却非常广泛。</p>
 </blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/白羊.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.2:</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/%E5%A5%94%E8%B7%91.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.3：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/曾经的你.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.4：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/超越梦想 .mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.5：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/成都.mkv" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
-<blockquote>
-<p>MV.6：</p>
-</blockquote>
-<p><video src="https://batdalao.github.io/musics/MV/荷塘月色.mp4" controls="controls" width="500" height="300">您的浏览器不支持播放该视频！</video></p>
+<h2 id="1-Hosts-到底干什么"><a href="#1-Hosts-到底干什么" class="headerlink" title="1.Hosts 到底干什么"></a>1.Hosts 到底干什么</h2><p>了解 Hosts 工作原理前要先了解互联网工作原理。</p>
+<p>当我们访问一个网站的时候，<strong>实际上访问的是这个网站所在服务器的 「IP 地址」</strong>，比如通过「220.181.38.148」也能打开百度的首页。</p>
+<p>但是「IP 地址」是数字，不便于记忆，所以我们给不同网站的「IP 地址」取名，也就是网站的「域名」，比如<a href="https://www.baidu.com/。" target="_blank" rel="noopener">https://www.baidu.com/。</a></p>
+<p>在 ARPANET（全球互联网的前生）发展初期是没有 DNS 的，整个网络中服务器数量都非常少，每台电脑只使用 Hosts 来解析不同服务器的「IP 地址」，后来互联网迅速壮大，单靠本地 Hosts 文件已经无法装下如此多信息，这才诞生了 DNS 。</p>
+<p><strong>所以，Hosts 文件相当于网站的「通讯录」，它记录着不同「域名」对应的「IP 地址」。</strong></p>
+<p>在操作系统中 Hosts 文件的优先级高于 DNS 服务器，如果 Hosts 有服务器信息，则直接调用，否则才询问 DNS 服务器。</p>
+<p>正是利用 Hosts 的高优先级，将错误的「IP 地址」与域名绑定，就实现了屏蔽某些服务器的效果。</p>
+<h2 id="2-Hosts-文件格式"><a href="#2-Hosts-文件格式" class="headerlink" title="2.Hosts 文件格式"></a>2.Hosts 文件格式</h2><p>Hosts 格式非常简单，左边为「服务器 IP 地址」，右边是对应域名，中间以最少一个空格隔开。</p>
+<h2 id="3-Hosts-应用场景"><a href="#3-Hosts-应用场景" class="headerlink" title="3.Hosts 应用场景"></a>3.Hosts 应用场景</h2><p>大多数操作系统都有一个与 Hosts 类似功能的文件，工作原理也一样。</p>
+<p>在 Windows 系统中，我们可能无法直接在「etc 文件夹」中修改保存它，可以将它复制到桌面，然后用记事本打开，修改后再复制回去。</p>
+<p><strong>1、屏蔽广告和破解</strong></p>
+<p>现在的网页广告大多是专门的广告投放公司在做，一部分广告屏蔽工具就是替换「无效的IP」来实现屏蔽广告的效果。</p>
+<p>127.0.0.1 就常用来作屏蔽 IP，这是「本机回送地址」，也就是你是用的电脑。</p>
+<p>比如我们在 Hosts 文件中加入 127.0.0.1 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 那就无法打开百度了</p>
+<p>同样利用这个原理，一些破解软件，也通过添加错误的 Hosts 信息来屏蔽激活服务器，避免查询激活状态。</p>
+<p><strong>2、访问 DNS 错误的网站</strong></p>
+<p>现在我们访问网页都是通过 DNS 解析 IP 地址，如果使用本地 Hosts 则可以跳过这一步直接访问服务器 IP，可以提升网页打开速度，不过现在的 DNS 服务器响应速度都很快，大多数时候没必要这样做。</p>
+<p>而有时候，有些网站，因为有些原因，导致 DNS 服务器无法给出正确的 IP 地址，也可以通过 Hosts 来代劳。</p>
+<p><strong>3、建立映射关系</strong></p>
+<p>有些公司的局域网内有自己的服务器，有些人也有自己的 NAS，每次输入 IP 访问有些麻烦，也可以再 Hosts 中将局域网中服务器 IP 与任意网址绑定，这样通过网址也能访问局域网中本没有域名的服务器。</p>
+<p><strong>4、被滥用</strong></p>
+<p>Hosts 简单又强大，自然就免不得被恶意使用，比如使用修改过的镜像，或者流氓PE安装系统，可能你的 Hosts 就已经被人动过手脚，他们将一些常用网站的 IP 换到自己的网站，以赚取浏览，甚至将用户导向一些还原度非常高的山寨网站上，骗取账户密码甚至财产。</p>
+<p>不过还好只是修改 Hosts 并不会造成致命的系统安全故障，大家尽量使用微软提供的官方镜像和安装工具装系统就好了。</p>
+<p><strong>如果你的 Hosts 已经被污染，也可以直接删除这个文件，或者到别的电脑上复制一个过来。</strong></p>
+<p>最后需要注意，因为 Hosts 文件配置的是「静态IP」，如果服务器更新了IP地址，本地Hosts 就会失效，需要及时更新 Hosts 文件才行。</p>
 
             </div>
             <hr/>
@@ -472,7 +592,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://batdalao.github.io/musics/MV01.html">https://batdalao.github.io/musics/MV01.html</a>
+                    <a href="https://batdalao.github.io/posts/d3bc.html">https://batdalao.github.io/posts/d3bc.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -509,7 +629,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/">
+                                    <span class="chip bg-color">技术杂谈</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -675,60 +799,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/9c9b.html">
                     <div class="card-image">
                         
+                        <img src="https://raw.githubusercontent.com/birdscall/newstart/master/images/4-16.jpg" class="responsive-img" alt="西江月·阻风山峰下">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
-                        
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">西江月·阻风山峰下</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            每日诗词2020·4·16
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%97%E8%AF%8D/" class="post-category">
+                                    诗词
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">诗词</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E8%AF%97%E8%AF%8D/">
+                        <span class="chip bg-color">每日诗词</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -736,43 +852,22 @@ MV.6
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/musics/MV01.html">
+                <a href="/posts/d10a.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="精彩MV（一）">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="数据结构与算法链接">
                         
-                        <span class="card-title">精彩MV（一）</span>
+                        <span class="card-title">数据结构与算法链接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-MV.1:
-
-您的浏览器不支持播放该视频！
-
-MV.2:
-
-您的浏览器不支持播放该视频！
-
-MV.3：
-
-您的浏览器不支持播放该视频！
-
-MV.4：
-
-您的浏览器不支持播放该视频！
-
-MV.5：
-
-您的浏览器不支持播放该视频！
-
-MV.6
+                            数据结构与算法链接
                         
                     </div>
                     <div class="publish-info">
@@ -781,13 +876,24 @@ MV.6
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            未名
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">数据结构与算法</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -860,6 +966,100 @@ MV.6
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
