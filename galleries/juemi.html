@@ -368,10 +368,113 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -401,7 +504,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10
+                    172
                 </div>
                 
 
@@ -423,11 +526,61 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
+                <h1 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h1><blockquote>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1EW411u7th?from=search&seid=12748058088766222319" target="_blank" rel="noopener">计算机科学速成课</a></li>
+<li><a href="https://cuiqingcai.com/" target="_blank" rel="noopener">崔庆才</a></li>
+<li><a href="https://ke.qq.com/admin/index.html#/v2/overview" target="_blank" rel="noopener">机构管理后台</a></li>
+<li><a href="https://learn.freecodecamp.one/responsive-web-design/basic-html-and-html5/headline-with-the-h2-element/" target="_blank" rel="noopener">freecodecamp</a></li>
+<li></li>
+</ul>
+</blockquote>
+<h2 id="hexo系列"><a href="#hexo系列" class="headerlink" title="hexo系列"></a>hexo系列</h2><blockquote>
+<ul>
+<li><a href="https://www.yzplove.top/posts/57688.html#toc-heading-5" target="_blank" rel="noopener">Hexo-theme-matery主题魔改记录</a></li>
+<li><a href="https://yafine-blog.cn/posts/4ab2.html#toc-heading-57" target="_blank" rel="noopener">Hexo+github搭建博客(超级详细版，精细入微)—过客励心</a></li>
+<li><a href="http://hudiskoray.iicp.net:4000/20191231123614/#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F" target="_blank" rel="noopener">hexo美化（Bootstrap Callout和fa图标的使用方法</a></li>
+<li><a href="https://www.yzplove.top/about" target="_blank" rel="noopener">无忧小窝</a></li>
+<li><a href="https://sunhwee.com/posts/6e8839eb.html#toc-heading-14" target="_blank" rel="noopener">洪卫</a></li>
+<li><a href="https://blog.sky03.cn/posts/42790.html#toc-heading-17" target="_blank" rel="noopener">各种优化</a></li>
+<li><a href="https://blog.sky03.cn/friends/" target="_blank" rel="noopener">Sky03’s Blog</a></li>
+<li><a href="https://yafine-blog.cn/posts/3b98.html" target="_blank" rel="noopener">修改matery原有主题相册</a></li>
+<li><a href="https://hexo.io/docs/one-command-deployment" target="_blank" rel="noopener">hexo官方文档</a></li>
+<li><a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a></li>
+<li><a href="https://yafine-blog.cn/posts/4e9b.html" target="_blank" rel="noopener">Typora集成PicGo图床服务</a></li>
+</ul>
+</blockquote>
+<h2 id="功勋阁"><a href="#功勋阁" class="headerlink" title="功勋阁"></a>功勋阁</h2><blockquote>
+<ul>
+<li><a href="https://www.cnblogs.com/hushuangpu/p/10316560.html" target="_blank" rel="noopener">hexo大文件上传失败</a></li>
+</ul>
+</blockquote>
+<h2 id="便捷"><a href="#便捷" class="headerlink" title="便捷"></a>便捷</h2><blockquote>
 <ul>
 <li><a href="http://www.zhmdy.top/music/" target="_blank" rel="noopener">懒人音乐</a></li>
 <li><a href="http://www.fontawesome.com.cn/faicons/" target="_blank" rel="noopener">图标库</a></li>
 <li><a href="http://www.uugai.com/" target="_blank" rel="noopener">logo制作</a></li>
+<li><a href="https://www.ipaddress.com/" target="_blank" rel="noopener">查IP</a></li>
+<li><a href="https://blog.csdn.net/SIMBA1949/article/details/79001226" target="_blank" rel="noopener">TYPORA的使用手册</a></li>
+<li><a href="https://tool.oschina.net/encrypt?type=2" target="_blank" rel="noopener">在线加密解密</a></li>
+<li></li>
+</ul>
+</blockquote>
+<h2 id="有一定参考价值"><a href="#有一定参考价值" class="headerlink" title="有一定参考价值"></a>有一定参考价值</h2><blockquote>
+<ul>
+<li><a href="https://blog.csdn.net/wifi74262580/article/details/85060187" target="_blank" rel="noopener">GitHub大文件(大于100M)上传</a></li>
+<li></li>
+</ul>
+</blockquote>
+<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><blockquote>
+<ul>
+<li><a href="https://github.com/BATdalao/BATdalao.github.io" target="_blank" rel="noopener">GitHub个人站点</a></li>
+<li><a href="https://batdalao.github.io/">个人博客</a></li>
+</ul>
+</blockquote>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><blockquote>
+<ul>
+<li><a href="http://47.106.216.203:5000/courses" target="_blank" rel="noopener">青橙时光</a></li>
 </ul>
 </blockquote>
 
@@ -675,14 +828,20 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            常用
 
-懒人音乐
-图标库
-logo制作
+计算机科学速成课
+崔庆才
+机构管理后台
+freecodecamp
 
 
 
+hexo系列
+
+Hexo-theme-matery主题魔改记录
+Hexo+github搭建博客(超级详细版，精细入微)—过客励心
+hexo美化（Bootstra
                         
                     </div>
                     <div class="publish-info">
@@ -720,14 +879,20 @@ logo制作
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            常用
 
-懒人音乐
-图标库
-logo制作
+计算机科学速成课
+崔庆才
+机构管理后台
+freecodecamp
 
 
 
+hexo系列
+
+Hexo-theme-matery主题魔改记录
+Hexo+github搭建博客(超级详细版，精细入微)—过客励心
+hexo美化（Bootstra
                         
                     </div>
                     <div class="publish-info">
@@ -815,6 +980,100 @@ logo制作
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
@@ -1025,13 +1284,7 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
     <script type="text/javascript" src="/js/fireworks.js"></script>
     <!--樱花-->
-    <script type="text/javascript">
-        //只在桌面版网页启用特效
-        var windowWidth = $(window).width();
-        if (windowWidth > 768) {
-            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-        }
-    </script>
+    
 
     <!-- Baidu Analytics -->
 
