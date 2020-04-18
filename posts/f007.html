@@ -645,13 +645,14 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
 </blockquote>
 <p><strong>下面探讨global修饰符的用法：</strong></p>
 <h4 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h4><ul>
-<li><p>首先是python的一个奇异现象，在模块层面定义的变量（无需global修饰），如果在函数中没有再定义同名变量，可以在函数中当做全局变量使用：</p>
-<pre class=" language-python"><code class="language-python">a<span class="token operator">=</span><span class="token number">1</span>
-<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-f<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> </code></pre>
-</li>
+<li>首先是python的一个奇异现象，在模块层面定义的变量（无需global修饰），如果在函数中没有再定义同名变量，可以在函数中当做全局变量使用：</li>
+</ul>
+<pre class=" language-python"><code class="language-python">  a<span class="token operator">=</span><span class="token number">1</span>
+  <span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+  f<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> </code></pre>
+<ul>
 <li><p>上述代码可以正常运行且输出为1和1</p>
 </li>
 <li><p>但如果在函数中有再赋值/定义（因为python是弱类型语言，赋值语句和其定义变量的语句一样），则会产生引用了未定义变量的错误：</p>
