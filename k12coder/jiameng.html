@@ -39,10 +39,12 @@
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
-                    
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
-                    
-                    <span class="logo-span">未名亦名</span>
+                    <div>
+                        
+                        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">未名亦名</span>
+                    </div>
                 </a>
             </div>
             
@@ -191,7 +193,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">未名亦名</div>
         <div class="logo-desc">
@@ -542,7 +544,7 @@
 <p>或者通过除此外，像一些平台如头条还设置诸如问答奖励板块，我们在获得原创之后还能开通打赏功能，直接从观众那里获得变现。综合以上来看，通过渠道变现是非常直接和靠谱的方式，只要你的内容足够优质，即使还没有商业盈利来源，至少能通过渠道获得一个保底收入，这也是当前大多数短视频团队沿用的办法。</p>
 <p>另外还有激励收益。更多信息可看<a href="https://www.zhihu.com/question/67393381/answer/256356869" target="_blank" rel="noopener">在优酷爱奇艺腾讯等视频网站，上传自己制作的视频，如何盈利？</a></p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/20200509221135.png" alt="创作激励"></p>
+<p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/20200509221135.png" alt="创作激励"></p>
 <blockquote>
 <ul>
 <li>另一方面可以通过分销模式在我们平台盈利，比如一个学员看了你个视频通过特定的二维码或者网址注册了我们的平台，你可以获取一半的注册会员的金额，吸引更多的用户注册我们的平台，收益也就越多。</li>
@@ -740,10 +742,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -786,7 +788,7 @@
                 <a href="/k12coder/jiameng.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/4-24.jpg" class="responsive-img" alt="k12coder教师加盟">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/4-24.jpg" class="responsive-img" alt="k12coder教师加盟">
                         
                         <span class="card-title">k12coder教师加盟</span>
                     </div>
@@ -825,7 +827,7 @@
                 <a href="/k12coder/jiameng.html">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/4-24.jpg" class="responsive-img" alt="k12coder教师加盟">
+                        <img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BATdalao/YING-imgs/articles/4-24.jpg" class="responsive-img" alt="k12coder教师加盟">
                         
                         <span class="card-title">k12coder教师加盟</span>
                     </div>
@@ -1268,6 +1270,11 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
