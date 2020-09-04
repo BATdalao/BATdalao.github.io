@@ -235,33 +235,6 @@
     
     
     <entry>
-      <title>个人博客静态页面中嵌入Jupyter</title>
-      <link href="/posts/ac56.html"/>
-      <url>/posts/ac56.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="个人博客静态页面中嵌入Jupyter"><a href="#个人博客静态页面中嵌入Jupyter" class="headerlink" title="个人博客静态页面中嵌入Jupyter"></a>个人博客静态页面中嵌入Jupyter</h2><blockquote><ul><li>以GPCP降水相关分析。示例代码：</li></ul></blockquote><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://nbviewer.jupyter.org/github/royalosyin/Python-Practical-Application-on-Climate-Variability-Studies/blob/master/ex12-Analysis%20of%20Monthly%20GPCP%20precipitation.ipynb<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>570<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2000<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span></code></pre><blockquote><ul><li>效果如下</li></ul></blockquote><iframe src="https://nbviewer.jupyter.org/github/royalosyin/Python-Practical-Application-on-Climate-Variability-Studies/blob/master/ex12-Analysis%20of%20Monthly%20GPCP%20precipitation.ipynb" width="570" height="2000"></iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具安装/使用 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> jupyter notebook </tag>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构与算法概括</title>
       <link href="/posts/2c49.html"/>
       <url>/posts/2c49.html</url>
