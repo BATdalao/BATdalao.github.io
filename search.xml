@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>微机原理两个程序</title>
+      <link href="/posts/d72.html"/>
+      <url>/posts/d72.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="显示一个固定的字符串"><a href="#显示一个固定的字符串" class="headerlink" title="显示一个固定的字符串"></a>显示一个固定的字符串</h2><pre class=" language-bash"><code class="language-bash">TITLE  STRING DISPLAY<span class="token punctuation">;</span> DATA SEGMENTSTRING1 DB <span class="token string">'WELCOME TO XTU $'</span> ；字符串以’$’符号结尾，以单引号括起来DATA ENDSCODE SEGMENT  ASSUME CS:CODE,DS:DATASTART:  PUSH DS  MOV AX,0  PUSH AX  MOV AX,DATA  MOV DS,AX  LEA DX,STRING1  MOV AH,9；DOS功能调用，在屏幕上显示字符串  INT 21H   ；DOS中断  MOV AH,4CH  INT 21HCODE ENDS  END START该程序成功显示了固定字符串WELCOME TO XTU，完成了字符显示程序。</code></pre><h2 id="寻找字符串中某个字符的数量"><a href="#寻找字符串中某个字符的数量" class="headerlink" title="寻找字符串中某个字符的数量"></a>寻找字符串中某个字符的数量</h2><pre class=" language-bash"><code class="language-bash">TITLE  calculate word quantity<span class="token punctuation">;</span> DATA SEGMENTSTRING1 DB <span class="token string">'ABAaAAAAABaaaaaBBBBBB'</span>  <span class="token punctuation">;</span>输入待检测的字符串STRING2 DB <span class="token string">'B'</span>           <span class="token punctuation">;</span>给定要检测的那个数<span class="token punctuation">;</span>STRING3 DB STRING2-STRING1 DATA ENDSCODE SEGMENT  ASSUME CS:CODE,DS:DATA,ES:DATASTART:  MOV  AX,DATA <span class="token punctuation">;</span>将数据送给AX  MOV  DS,AX   <span class="token punctuation">;</span>将AX中的数据送到DS  MOV  ES,AX   <span class="token punctuation">;</span>将AX中的数据送到ES  MOV  DI,OFFSET STRING1  <span class="token punctuation">;</span>将字符串1的偏移地址送到DI  MOV  AL,STRING2         <span class="token punctuation">;</span>将字符串2的内容送给AL  MOV  CX,50              <span class="token punctuation">;</span>设置循环次数NEXT:                        <span class="token punctuation">;</span>调用一个函数  CMP <span class="token punctuation">[</span>DI<span class="token punctuation">]</span>,AL              <span class="token punctuation">;</span>以DI里的内容为地址所对应的数与AL比较  JNE NO_FOUND             <span class="token punctuation">;</span>比较结果如果不相等，跳转到NO_FOUND  INC BX                  <span class="token punctuation">;</span>如果比较结果相等，则执行这条语句，BX自加1NO_FOUND:  INC DI            <span class="token punctuation">;</span>比较结果不等，则让DI自加，让字符串1的下一个字符                    <span class="token punctuation">;</span>进行比较  LOOP NEXT                 <span class="token punctuation">;</span>回到NEXT比较,直到CX为0  MOV  DL,BL                <span class="token punctuation">;</span>将计好的数给DL    ADD DL,30H                <span class="token punctuation">;</span>将DL转换成ASCII码  MOV  AH,02  INT  21H  MOV  AH,4CH  INT  21HCODE ENDSEND START</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机组成原理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机组成原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络期末考试重点</title>
       <link href="/posts/e967.html"/>
       <url>/posts/e967.html</url>
