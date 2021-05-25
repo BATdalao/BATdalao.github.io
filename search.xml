@@ -8,12 +8,12 @@
       <link href="/posts/1f59.html"/>
       <url>/posts/1f59.html</url>
       
-        <content type="html"><![CDATA[<h1 id="HTCondor计算集群的搭建历程"><a href="#HTCondor计算集群的搭建历程" class="headerlink" title="HTCondor计算集群的搭建历程"></a>HTCondor计算集群的搭建历程</h1><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>首先是Windows下的操作，仔细对照实验指导书来说，反复修改重启，最后突然发现只要改一个配置文件就可以完成这些操作。虽然Windows的最终还是没有搞出来，但还是学到了很多知识。</p><p>Windows下的方法不行了，后来开了个Windows的虚拟机，但是htcondor软件不支持在windows虚拟机上安装，于是又改用Linux的方法，有个ubuntu18的虚拟机，但因为忘了root密码无法使用，当时只有centos和ubuntu19的镜像，于是连开了几台centos和ubuntu19的虚拟机，发现无法输入命令，更别提进行通信，一气之下，直接开了三台国外的服务器，配置相互之间的通信。</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BATdalao/cdn_jsDelivr/imgs/052602.png" alt=""></p><p>一切都很顺利，输入命令没有报错，但最后condor status的时候出现6001无法连接的问题，这时候突然意识到没有在同一个网段内，又做了很多无用功。</p><p>后来弄到了ubuntu18的iso文件，一连开了五个虚拟机咔咔一顿配置才弄好。</p><h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><ul><li><p>通过配置文件改变权限属性的意识要有</p></li><li><p>虚拟机的root密码和登录密码尽量简单些，比如直接弄成123456</p></li><li><p>分析好属性了再做，比如要在同一网段和ubuntu18</p></li><li><p>理解原理了再去做会更容易些</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>环境：<strong>四台同网段的Linux虚拟机</strong></p><ul><li>一台当作Central Manager</li><li>一台用来Submit </li><li>两台用来Execute</li></ul></blockquote><h3 id="（一）对四台虚拟机分别进行此操作"><a href="#（一）对四台虚拟机分别进行此操作" class="headerlink" title="（一）对四台虚拟机分别进行此操作"></a>（一）对四台虚拟机分别进行此操作</h3><pre class=" language-python"><code class="language-python">apt<span class="token operator">-</span>get update <span class="token operator">&amp;</span><span class="token operator">&amp;</span> apt<span class="token operator">-</span>get install <span class="token operator">-</span>y curl</code></pre><p><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210526024911229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0Mjc1MjEz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h3 id="（二）对三个角色分别进行如下操作"><a href="#（二）对三个角色分别进行如下操作" class="headerlink" title="（二）对三个角色分别进行如下操作"></a>（二）对三个角色分别进行如下操作</h3><h4 id="1）充当Central-Manager角色的虚拟机"><a href="#1）充当Central-Manager角色的虚拟机" class="headerlink" title="1）充当Central Manager角色的虚拟机"></a>1）充当Central Manager角色的虚拟机</h4><p>首先，查找此虚拟机的IP<br>命令行输入<code>ifconfig -a</code>,红框的即为虚拟机IP<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210526031738725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0Mjc1MjEz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>将此IP替换192.168.87.132，输入如下命令</p><pre class=" language-python"><code class="language-python">sudo curl <span class="token operator">-</span>fsSL https<span class="token punctuation">:</span><span class="token operator">//</span>get<span class="token punctuation">.</span>htcondor<span class="token punctuation">.</span>org <span class="token operator">|</span> GET_HTCONDOR_PASSWORD<span class="token operator">=</span>wmcoder <span class="token operator">/</span>bin<span class="token operator">/</span>bash <span class="token operator">-</span>s <span class="token operator">-</span><span class="token operator">-</span> <span class="token operator">-</span><span class="token operator">-</span>no<span class="token operator">-</span>dry<span class="token operator">-</span>run <span class="token operator">-</span><span class="token operator">-</span>central<span class="token operator">-</span>manager <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">87.132</span></code></pre><h4 id="2）充当Submit-角色的虚拟机"><a href="#2）充当Submit-角色的虚拟机" class="headerlink" title="2）充当Submit 角色的虚拟机"></a>2）充当Submit 角色的虚拟机</h4><p>192.168.87.132用Central Manager角色虚拟机的IP来替换</p><pre class=" language-python"><code class="language-python">sudo curl <span class="token operator">-</span>fsSL https<span class="token punctuation">:</span><span class="token operator">//</span>get<span class="token punctuation">.</span>htcondor<span class="token punctuation">.</span>org <span class="token operator">|</span> GET_HTCONDOR_PASSWORD<span class="token operator">=</span>wmcoder <span class="token operator">/</span>bin<span class="token operator">/</span>bash <span class="token operator">-</span>s <span class="token operator">-</span><span class="token operator">-</span> <span class="token operator">-</span><span class="token operator">-</span>no<span class="token operator">-</span>dry<span class="token operator">-</span>run <span class="token operator">-</span><span class="token operator">-</span>submit <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">87.132</span></code></pre><h4 id="3）充当Execute角色的虚拟机（两台）"><a href="#3）充当Execute角色的虚拟机（两台）" class="headerlink" title="3）充当Execute角色的虚拟机（两台）"></a>3）充当Execute角色的虚拟机（两台）</h4><p>192.168.87.132用Central Manager角色虚拟机的IP来替换</p><pre class=" language-python"><code class="language-python">sudo curl <span class="token operator">-</span>fsSL https<span class="token punctuation">:</span><span class="token operator">//</span>get<span class="token punctuation">.</span>htcondor<span class="token punctuation">.</span>org <span class="token operator">|</span> GET_HTCONDOR_PASSWORD<span class="token operator">=</span>wmcoder <span class="token operator">/</span>bin<span class="token operator">/</span>bash <span class="token operator">-</span>s <span class="token operator">-</span><span class="token operator">-</span> <span class="token operator">-</span><span class="token operator">-</span>no<span class="token operator">-</span>dry<span class="token operator">-</span>run <span class="token operator">-</span><span class="token operator">-</span>execute <span class="token number">192.168</span><span class="token punctuation">.</span><span class="token number">87.132</span></code></pre><h3 id="（三）执行condor-status查看"><a href="#（三）执行condor-status查看" class="headerlink" title="（三）执行condor_status查看"></a>（三）执行condor_status查看</h3><p>登录到提交计算机上的用户应该能够查看池中的执行计算机（使用condor_status），提交作业（使用condor_submit）以及运行（使用condor_q）。显示的为两台执行角色的虚拟机。<br><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210526030428631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0Mjc1MjEz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h3 id="（附）部分bug及解决方案"><a href="#（附）部分bug及解决方案" class="headerlink" title="（附）部分bug及解决方案"></a>（附）部分bug及解决方案</h3><h4 id="因未设置密码问题无法使用root权限"><a href="#因未设置密码问题无法使用root权限" class="headerlink" title="因未设置密码问题无法使用root权限"></a>因未设置密码问题无法使用root权限</h4><p><img src="/medias/loading.gif" data-original="https://img-blog.csdnimg.cn/20210526034256456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0Mjc1MjEz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>参考链接：<br><a href="https://htcondor.readthedocs.io/en/latest/getting-htcondor/install-linux-as-root.html" target="_blank" rel="noopener">https://htcondor.readthedocs.io/en/latest/getting-htcondor/install-linux-as-root.html</a><br><a href="https://htcondor.readthedocs.io/en/latest/getting-htcondor/admin-quick-start.html#admin-quick-start-guide" target="_blank" rel="noopener">https://htcondor.readthedocs.io/en/latest/getting-htcondor/admin-quick-start.html#admin-quick-start-guide</a></p>]]></content>
       
       
       <categories>
           
-          <category> 技术杂谈 </category>
+          <category> 云计算 </category>
           
       </categories>
       
@@ -21,6 +21,35 @@
         <tags>
             
             <tag> 技术杂谈 </tag>
+            
+            <tag> 云计算 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTCondor计算集群的搭建历程</title>
+      <link href="/posts/1f59.html"/>
+      <url>/posts/1f59.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTCondor计算集群的搭建历程"><a href="#HTCondor计算集群的搭建历程" class="headerlink" title="HTCondor计算集群的搭建历程"></a>HTCondor计算集群的搭建历程</h1><h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>首先是Windows下的操作，仔细对照实验指导书来说，反复修改重启，最后突然发现只要改一个配置文件就可以完成这些操作。虽然Windows的最终还是没有搞出来，但还是学到了很多知识。</p><p>Windows下的方法不行了，后来开了个Windows的虚拟机，但是htcondor软件不支持在windows虚拟机上安装，于是又改用Linux的方法，有个ubuntu18的虚拟机，但因为忘了root密码无法使用，当时只有centos和ubuntu19的镜像，于是连开了几台centos和ubuntu19的虚拟机，发现无法输入命令，更别提进行通信，一气之下，直接开了三台国外的服务器，配置相互之间的通信。</p><p><img src="/medias/loading.gif" data-original="https://cdn.jsdelivr.net/gh/BATdalao/cdn_jsDelivr/imgs/052602.png" alt=""></p><p>一切都很顺利，输入命令没有报错，但最后condor status的时候出现6001无法连接的问题，这时候突然意识到没有在同一个网段内，又做了很多无用功。</p><p>后来弄到了ubuntu18的iso文件，一连开了五个虚拟机咔咔一顿配置才弄好。</p><h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><ul><li><p>通过配置文件改变权限属性的意识要有</p></li><li><p>虚拟机的root密码和登录密码尽量简单些，比如直接弄成123456</p></li><li><p>分析好属性了再做，比如要在同一网段和ubuntu18</p></li><li><p>理解原理了再去做会更容易些</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 云计算 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+            <tag> 云计算 </tag>
             
         </tags>
       
