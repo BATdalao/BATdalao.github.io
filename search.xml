@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>手机投屏到电脑</title>
+      <link href="/posts/b0f6.html"/>
+      <url>/posts/b0f6.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="手机投屏到电脑（Windows）"><a href="#手机投屏到电脑（Windows）" class="headerlink" title="手机投屏到电脑（Windows）"></a>手机投屏到电脑（Windows）</h1><h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><h4 id="PC端"><a href="#PC端" class="headerlink" title="PC端"></a>PC端</h4><ul><li>使用快捷键<strong>WIN+I</strong>打开设置面板，点击<strong>系统</strong>，点击<strong>投影到此电脑</strong></li></ul><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210626234619963.png" alt=""></p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210626234708925.png" alt=""></p><h4 id="移动端连接"><a href="#移动端连接" class="headerlink" title="移动端连接"></a>移动端连接</h4><ul><li>在WLAN中找到无线投屏并开启</li></ul><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210627000137803.png" alt=""></p><ul><li><p>电脑弹出连接需要的PIN，在手机上输入即可完成连接</p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/QQ%E6%88%AA%E5%9B%BE20210626235508.png" alt=""></p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210627000252572.png" alt=""></p></li></ul><hr><h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><ul><li><p>使用WIN10电脑投影是发现连接里找不到“投影到此电脑”</p></li><li><p>解决方法：<strong>设置-应用-应用和功能-添加功能-搜索无线显示器-安装</strong>，安装成功后再次去尝试即可（最好重启下电脑）</p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210627000949241.png" alt=""></p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210627001031204.png" alt=""></p><p><img src="/medias/loading.gif" data-original="https://wmcoder.oss-cn-shenzhen.aliyuncs.com/img/image-20210627001214127.png" alt=""></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术杂谈 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术杂谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>余秋雨《我在等你》</title>
       <link href="/posts/1d3d.html"/>
       <url>/posts/1d3d.html</url>
